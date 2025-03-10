@@ -1,0 +1,166 @@
+.container {
+	// background-color: black;
+	padding: 8rem 0;
+
+	display: grid;
+
+	grid-template-columns:
+		minmax(6rem, auto) repeat(4, minmax(min-content, 25rem))
+		minmax(6rem, auto);
+
+	grid-template-rows: repeat(10, 70px);
+	gap: 2rem;
+
+	@media screen and (min-width: 20em) and (max-width: 48em) {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+	}
+
+	& > * {
+		padding: 2rem;
+		border-radius: 0.8rem;
+	}
+}
+
+.box {
+	&--1 {
+		background-color: var(--Yellow-100);
+		grid-column: 2 / 3;
+		grid-row: 1 / span 5;
+
+		display: grid;
+		justify-content: space-between;
+		gap: 2rem;
+
+		&__heading {
+			font-style: italic;
+			span {
+				color: var(--Purple-500);
+				display: block;
+			}
+			align-self: end;
+		}
+	}
+
+	&--2 {
+		background-color: var(--Purple-500);
+		grid-column: 3 / span 2;
+		grid-row: 1 / span 4;
+		color: var(--White);
+		text-align: center;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		&__img {
+			width: 15rem;
+			margin: 2.5rem auto 0;
+		}
+	}
+
+	&--3 {
+		background-color: var(--Purple-100);
+		grid-column: 5 / span 1;
+		grid-row: 1 / span 7;
+
+		display: grid;
+		justify-content: space-between;
+		overflow: hidden;
+
+		&__img {
+			width: 175%;
+			align-self: center;
+		}
+
+		h3 {
+			align-self: end;
+		}
+	}
+
+	&--4 {
+		background-color: var(--Yellow-500);
+		grid-column: 2 / span 1;
+		grid-row: 6 / span 5;
+
+		display: grid;
+		grid-template-rows: min-content 1fr;
+
+		&__img {
+			align-self: end;
+		}
+	}
+
+	&--5 {
+		background-color: var(--White);
+		grid-column: 3 / span 1;
+		grid-row: 5 / span 3;
+		overflow: hidden;
+
+		display: grid;
+
+		&__img {
+			width: 145%;
+		}
+
+		h3 {
+			align-self: end;
+			width: 80%;
+		}
+	}
+
+	&--6 {
+		background-color: var(--Yellow-500);
+		grid-column: 4 / span 1;
+		grid-row: 5 / span 3;
+		overflow: hidden;
+
+		display: grid;
+		gap: 2rem;
+
+		h3 {
+			align-self: start;
+			width: 80%;
+		}
+	}
+
+	&--7 {
+		background-color: var(--White);
+		grid-column: 3 / span 1;
+		grid-row: 8 / span 3;
+
+		display: grid;
+
+		span {
+			font-size: 6rem;
+			display: block;
+		}
+
+		&__img {
+			width: 80%;
+			align-self: end;
+		}
+	}
+
+	&--8 {
+		background-color: var(--Purple-500);
+		grid-column: 4 / span 2;
+		grid-row: 8 / span 3;
+
+		display: grid;
+		justify-content: space-between;
+		grid-auto-flow: column;
+		gap: 2rem;
+
+		&__img {
+			width: 20rem;
+			align-self: center;
+		}
+
+		h2 {
+			color: var(--White);
+			align-self: center;
+		}
+	}
+}

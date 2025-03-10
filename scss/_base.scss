@@ -1,0 +1,39 @@
+:root {
+	--Purple-100: hsl(255, 34%, 79%);
+	--Purple-500: hsl(256, 67%, 59%);
+
+	--Yellow-100: hsl(31, 66%, 93%);
+	--Yellow-500: hsl(39, 100%, 71%);
+
+	--White: hsl(0, 0%, 100%);
+	--Black: hsl(0, 0%, 7%);
+}
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+	overflow-x: hidden;
+}
+
+body {
+	font-family: 'DM Sans';
+	font-size: 1.8rem;
+	line-height: 1.4;
+	display: grid;
+	align-content: center;
+	justify-content: center;
+}
+
+img {
+	width: 100%;
+	object-fit: cover;
+	display: block;
+}
